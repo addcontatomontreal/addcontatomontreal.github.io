@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+    <link rel="shortcut icon" href="vendor/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="vendor/" type="image/x-icon">
+
+    <!-- Title Page-->
+    <title>Formulário de Cadastro</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div id="loadding">
+		<h1 class="mess">Validando dados</h1>
+        <div class="loader"></div> 
+	</div>
+
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Formulário de Cadastro</h2>
+                    <form method="POST" id="form-register">
+                        <div class="col-4">
+                            <div class="input-group">
+                                <label class="label">Nome Completo</label>
+                                <input class="input--style-4 element" type="text" name="name" id="name">
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Data de Nascimento</label>
+                                    <div class="input-group-icon">
+                                        <input class="input--style-4 js-datepicker element" type="text" name="birthday" id="birthday">
+                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Genero</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Masculino
+                                            <input type="radio" name="gender" value="male" id="male" class="element">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Feminino
+                                            <input type="radio" name="gender" value="female" id="female" class="element"> 
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">RG</label>
+                                    <input class="input--style-4 element" type="text" name="rg" id="rg">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Órgão Expedidor</label>
+                                    <input class="input--style-4 element" type="text" name="organ_rg" id="organ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">CPF</label>
+                                    <input class="input--style-4 element" type="text" name="cpf" id="cpf">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">PIS/NIS</label>
+                                    <input class="input--style-4 element" type="text" name="pis_nis" id="pis_nis">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Email</label>
+                                    <input class="input--style-4 element" type="email" name="email" id="email">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Celular</label>
+                                    <input class="input--style-4 element" type="text" name="phone" id="phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Data de Admissão</label>
+                                    <div class="input-group-icon">
+                                        <input class="input--style-4 js-admission element" type="text" name="admission" id="admission">
+                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar-admission"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Cod. Unid Validação</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="unit_code" id="unit_code" class="element">
+                                            <option value="" selected="selected"> </option>
+                                            <option value="7265">7265 - Rio de Janeiro</option>
+                                            <option value="7390">7390 - Brasília</option>
+                                            <option value="7266">7266 - São Paulo</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Cargo</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="role" id="role" class="element">
+                                            <option selected="selected"></option>
+                                            <option value="analista-de-teste">Analista de Teste</option>
+                                            <option value="arquiteto-de-teste">Arquiteto de Teste</option>
+                                            <option value="consultor-de-qualidade">Consultor de Qualidade</option>
+                                            <option value="preposto-geral">Preposto Geral</option>
+                                            <option value="preposto-regional">Preposto Regional</option>
+                                            <option value="lider-tecnico">Lider Técnico</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">FOTO 3X4 JPG - até 50KB</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <input type="file" class="form-control-file element" name="thumbnail" id="thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert msg-server" role="alert">
+                        </div>
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Enviar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+    <script src="vendor/mask/jquery.mask.min.js"></script>
+    <script src="vendor/jqueryvalidation/jqueryvalidation.js"></script>
+    <script src="vendor/additional-methods/additional-methods.min.js"></script>
+
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+    <script>
+        $.get("https://cadastro-montreal.herokuapp.com");
+    </script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
